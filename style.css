@@ -1,88 +1,193 @@
+/* 全局重置 - 禅意素雅风格 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "思源宋体", "楷体", "微软雅黑", serif;
+}
+
+:root {
+    --zen-black: #232b27;
+    --zen-red: #7c1c1c;
+    --zen-gray: #555555;
+    --zen-bg: #f6f6f1;
+    --zen-white: #ffffff;
+    --zen-line: #e5e5e5;
 }
 
 body {
-    background-color: #f6f2eb;
-    color: #222222;
-    font-family: "思源宋体", "SimSun", serif;
-    line-height: 1.9;
+    background-color: var(--zen-bg);
+    color: var(--zen-black);
+    line-height: 2;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .container {
-    max-width: 820px;
+    width: 1200px;
     margin: 0 auto;
-    padding: 50px 24px;
+    padding: 0 20px;
 }
 
-.header {
-    text-align: center;
-    padding: 32px 0;
-    border-bottom: 1px solid #c4bcaf;
-    margin-bottom: 36px;
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
 }
 
-.header h1 {
-    font-size: 38px;
+/* 导航栏 */
+header {
+    background: var(--zen-black);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-wrap {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 4px;
     font-weight: normal;
+}
+
+.nav-list {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    padding: 8px 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #f0d29a;
+}
+
+/* 横幅 */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/zen-bg.jpg) center/cover no-repeat;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
     letter-spacing: 6px;
-    color: #111;
 }
 
-.subtitle {
-    margin-top: 12px;
-    font-size: 16px;
-    color: #666;
-    letter-spacing: 3px;
-}
-
-.nav {
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-.nav a {
-    margin: 0 16px;
-    text-decoration: none;
-    color: #404040;
+.banner p {
     font-size: 18px;
-    transition: 0.3s ease;
+    color: #f0d29a;
 }
 
-.nav a:hover {
-    color: #7a4020;
-}
-
+/* 通用板块 */
 .section {
-    margin-bottom: 48px;
+    padding: 60px 0;
 }
 
-.section h2 {
-    font-size: 23px;
-    font-weight: normal;
-    margin-bottom: 16px;
-    padding-left: 12px;
-    border-left: 3px solid #7a4020;
-}
-
-.section p {
-    font-size: 17px;
-    text-indent: 2em;
-    color: #333;
-}
-
-.zen-quote p {
-    margin: 14px 0;
-    text-indent: 0;
-}
-
-.footer {
-    margin-top: 70px;
+.section-title {
+    font-size: 30px;
     text-align: center;
-    padding-top: 24px;
-    border-top: 1px solid #c4bcaf;
-    color: #707070;
-    font-size: 14px;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: var(--zen-red);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.zen-card {
+    background: var(--zen-white);
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid var(--zen-line);
+    margin-bottom: 30px;
+}
+
+.zen-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--zen-red);
+}
+
+.zen-card p {
+    margin-bottom: 12px;
+    color: var(--zen-gray);
+}
+
+/* 偈语区块 */
+.verse-item {
+    text-align: center;
+    padding: 12px 0;
+    font-size: 17px;
+    color: var(--zen-black);
+}
+
+/* 页脚 */
+footer {
+    background: var(--zen-black);
+    color: #ccc;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+/* 返回顶部 */
+.back-top {
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    width: 45px;
+    height: 45px;
+    background: var(--zen-black);
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+/* 移动端适配 */
+@media (max-width:768px) {
+    .nav-list {
+        display: none;
+    }
+    .banner h1 {
+        font-size: 28px;
+    }
+    .section-title {
+        font-size: 24px;
+    }
 }
