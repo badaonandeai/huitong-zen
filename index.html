@@ -3,312 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>慧通居士 | 个人修行主页</title>
+    <title>慧通居士 | 水墨禅心</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft YaHei", SimSun, serif;
-        }
-        body {
-            background-color: #f8f6f2;
-            color: #333;
-            line-height: 1.8;
-        }
-        /* 头部禅意横幅 */
-        header {
-            background: linear-gradient(rgba(60, 40, 20, 0.85), rgba(60, 40, 20, 0.85)), url("https://picsum.photos/id/1036/1920/600") center/cover no-repeat;
-            text-align: center;
-            color: #fff;
-            padding: 80px 20px;
-        }
-        header h1 {
-            font-size: 42px;
-            letter-spacing: 8px;
-            margin-bottom: 12px;
-        }
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-        /* 导航栏 */
-        nav {
-            background: #483420;
-            position: sticky;
-            top: 0;
-            z-index: 99;
-        }
-        .nav-box {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #e9e2d6;
-            text-decoration: none;
-            padding: 16px 26px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            background: #6d4f30;
-        }
-        nav a.active {
-            background: #7c5b38;
-        }
-        /* 主体容器 */
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        .section {
-            background: #fff;
-            padding: 40px;
-            margin-bottom: 40px;
-            border-radius: 6px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        }
-        .section h2 {
-            color: #5a3f24;
-            border-left: 5px solid #967248;
-            padding-left: 14px;
-            margin-bottom: 24px;
-            font-size: 26px;
-        }
-        /* 居士简介 */
-        .about-wrap {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        .about-text p {
-            font-size: 16px;
-            margin-bottom: 16px;
-            text-indent: 2em;
-        }
-        /* 文章卡片 */
-        .article-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 24px;
-            margin-top: 20px;
-        }
-        .article-card {
-            border: 1px solid #e2ddd5;
-            padding: 22px;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-        .article-card:hover {
-            box-shadow: 0 4px 15px rgba(110,80,40,0.12);
-        }
-        .article-card h3 {
-            color: #503820;
-            margin-bottom: 10px;
-        }
-        .article-card .date {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-        /* 相册简易样式 */
-        .album-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 16px;
-        }
-        .album-box img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        /* 留言框 */
-        .msg-box textarea {
-            width: 100%;
-            border: 1px solid #ddd;
-            padding: 14px;
-            font-size: 16px;
-            min-height: 140px;
-            margin-bottom: 16px;
-        }
-        .msg-box button {
-            background: #6d4f30;
-            color: white;
-            border: none;
-            padding: 12px 32px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .msg-box button:hover {
-            background: #86633c;
-        }
-        /* 页脚 */
-        footer {
-            background: #382818;
-            color: #ccc;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
-        footer p {
-            font-size: 14px;
-        }
-        /* 移动端适配 */
-        @media(max-width:768px){
-            header h1 {font-size: 28px;}
-            nav a {padding:12px 16px; font-size:14px;}
-            .section {padding:24px;}
-        }
-        /* 隐藏分栏，默认只显示首页，JS切换 */
-        .tab-item {display: none;}
-        .tab-item.show {display: block;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family: "KaiTi", serif;}
+        body{background:url(https://picsum.photos/id/1036/1920/1080) no-repeat center center fixed;background-size:cover;color:#222;}
+        .overlay{background:rgba(255,255,255,0.85);min-height:100vh;}
+        .container{max-width:900px;margin:0 auto;padding:60px 20px;}
+        header{text-align:center;margin-bottom:50px;}
+        h1{font-size:36px;color:#3a2a1f;letter-spacing:6px;}
+        .divider{width:80px;height:2px;background:#8b6f4e;margin:16px auto;}
+        nav{text-align:center;margin-bottom:50px;}
+        nav a{margin:0 20px;text-decoration:none;color:#5a4632;font-size:18px;}
+        .content{background:rgba(255,255,255,0.7);padding:40px;border-radius:8px;}
+        .post{margin-bottom:40px;}
+        .post h2{font-size:24px;color:#4a3a28;margin-bottom:12px;}
+        .post p{font-size:17px;line-height:2;text-indent:2em;}
+        footer{text-align:center;color:#666;padding:30px 0;margin-top:40px;}
     </style>
 </head>
 <body>
-    <!-- 头部 -->
-    <header>
-        <h1>慧通居士 修行小筑</h1>
-        <p>俗家弟子 · 静心观心 · 随笔自省</p>
-    </header>
-
-    <!-- 导航 -->
-    <nav>
-        <div class="nav-box">
-            <a href="#" class="nav-link active" data-tab="home">首页</a>
-            <a href="#" class="nav-link" data-tab="article">佛法随笔</a>
-            <a href="#" class="nav-link" data-tab="album">修行相册</a>
-            <a href="#" class="nav-link" data-tab="message">访客留言</a>
-            <a href="#" class="nav-link" data-tab="about">关于慧通</a>
-        </div>
-    </nav>
-
-    <!-- 主内容区 -->
-    <div class="container">
-        <!-- 首页 -->
-        <div class="tab-item show" id="home">
-            <div class="section">
-                <h2>静心寄语</h2>
-                <p style="font-size:20px;text-align:center;padding:30px 0;color:#5a3f24;">
-                    凡所有相，皆是虚妄；若见诸相非相，即见如来。<br>
-                    一心向善，日日自省，步步修行。
-                </p>
-            </div>
-            <div class="section">
-                <h2>近期感悟</h2>
-                <div class="article-list">
-                    <div class="article-card">
-                        <h3>平常心即是道</h3>
-                        <div class="date">2026-06-30</div>
-                        <p>修行不在深山古刹，而在柴米油盐。待人温和，遇事不嗔，守住一颗平常心，便是最好的修行。</p>
-                    </div>
-                    <div class="article-card">
-                        <h3>持戒修心，放下执念</h3>
-                        <div class="date">2026-06-25</div>
-                        <p>世间烦恼多源于执着，得失看淡，爱恨随缘，心无挂碍，则无有恐怖。</p>
-                    </div>
+    <div class="overlay">
+        <div class="container">
+            <header>
+                <h1>慧通居士</h1>
+                <div class="divider"></div>
+                <p>水墨禅心 · 修行随笔</p>
+            </header>
+            <nav>
+                <a href="#">首页</a>
+                <a href="#">文集</a>
+                <a href="#">相册</a>
+                <a href="#">关于</a>
+            </nav>
+            <div class="content">
+                <div class="post">
+                    <h2>云水禅心</h2>
+                    <p>水善利万物而不争，处众人之所恶，故几于道。修行当如水，柔软而有力量。</p>
+                </div>
+                <div class="post">
+                    <h2>静心观照</h2>
+                    <p>时时观照自心，不起妄念，不随境转，便是修行功夫。</p>
                 </div>
             </div>
-        </div>
-
-        <!-- 佛法随笔 -->
-        <div class="tab-item" id="article">
-            <div class="section">
-                <h2>修行随笔文集</h2>
-                <div class="article-list">
-                    <div class="article-card">
-                        <h3>读金刚经有感</h3>
-                        <div class="date">2026-06-20</div>
-                        <p>无住生心，不住于相。我们每日奔波，常常被外境牵动内心，学会放下，方能自在。</p>
-                    </div>
-                    <div class="article-card">
-                        <h3>日常居家如何修行</h3>
-                        <div class="date">2026-06-15</div>
-                        <p>在家居士无需远离俗世，孝顺父母、善待亲友、少贪少怒，便是日常修行根本。</p>
-                    </div>
-                    <div class="article-card">
-                        <h3>何为真正的慈悲</h3>
-                        <div class="date">2026-06-10</div>
-                        <p>慈悲不是一味忍让，是包容众生，体谅他人苦楚，常怀利他之心。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 相册 -->
-        <div class="tab-item" id="album">
-            <div class="section">
-                <h2>礼佛、修行纪实相册</h2>
-                <div class="album-box">
-                    <img src="https://picsum.photos/id/1036/400/300" alt="古寺晨光">
-                    <img src="https://picsum.photos/id/1060/400/300" alt="山间禅景">
-                    <img src="https://picsum.photos/id/1048/400/300" alt="静室焚香">
-                    <img src="https://picsum.photos/id/1068/400/300" alt="秋日禅院">
-                </div>
-            </div>
-        </div>
-
-        <!-- 留言 -->
-        <div class="tab-item" id="message">
-            <div class="section msg-box">
-                <h2>访客留言交流</h2>
-                <textarea placeholder="写下你的感悟与留言，互相共勉..."></textarea>
-                <button>提交留言</button>
-                <p style="margin-top:20px;color:#777;">注：本站仅交流修行心得，不提供法事、祈福、算命等有偿服务</p>
-            </div>
-        </div>
-
-        <!-- 关于慧通居士 -->
-        <div class="tab-item" id="about">
-            <div class="section about-wrap">
-                <div class="about-text">
-                    <h2>慧通居士简介</h2>
-                    <p>末学俗家弟子，法名慧通，皈依三宝多年，平日居家生活，工作之余静心读经、自省修身。</p>
-                    <p>建立此个人小站，只为记录平日读经感悟、生活修行点滴，与同修善友交流心得，广结善缘。</p>
-                    <p>本站所有内容仅为个人浅见，见解粗浅，仅供参考，不代表任何寺院及法师观点。若有谬误，恳请诸位善知识指正。</p>
-                    <p>修行之路漫漫，愿与诸君一同向善，修己安人。</p>
-                </div>
-            </div>
+            <footer>
+                <p>© 2026 慧通居士 · 水墨禅修小筑</p>
+            </footer>
         </div>
     </div>
-
-    <!-- 页脚 -->
-    <footer>
-        <p>© 2026 慧通居士个人修行主页 | 本站仅分享个人佛学感悟，无任何宗教经营性活动</p>
-        <p style="margin-top:8px;">诸恶莫作 众善奉行 自净其意</p>
-    </footer>
-
-    <!-- JS切换栏目 -->
-    <script>
-        // 导航切换
-        const links = document.querySelectorAll('.nav-link');
-        const tabs = document.querySelectorAll('.tab-item');
-        links.forEach(link=>{
-            link.onclick = function(e){
-                e.preventDefault();
-                // 清除激活
-                links.forEach(l=>l.classList.remove('active'));
-                tabs.forEach(t=>t.classList.remove('show'));
-                // 当前激活
-                this.classList.add('active');
-                let targetId = this.getAttribute('data-tab');
-                document.getElementById(targetId).classList.add('show');
-            }
-        })
-        // 留言按钮简易提示
-        const msgBtn = document.querySelector('.msg-box button');
-        msgBtn.onclick = function(){
-            alert('静态演示版：留言功能如需保存内容，需搭配后端PHP/数据库，如需我可以给你配套简易留言后端代码');
-        }
-    </script>
 </body>
 </html>
